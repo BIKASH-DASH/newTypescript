@@ -1,18 +1,10 @@
-import React,{Fragment} from 'react';
-
-import './App.css';
-
+import React from 'react';
+import MainPage from './components/MainPage'
 
 
-function App() {
 
-  
-  return (
-    <Fragment>
-      <h1>Rick and Marty</h1>
-      <p>pick your favorite  episode</p>
-    </Fragment>
-  );
+const App:React.FC = () => {
+  return <MainPage/>
 }
 
 export default App;
