@@ -1,29 +1,18 @@
+import { Action } from '../actions/index';
+import {ActionType} from '../action-types/index'
 const initialState = 0;
 
-interface DepositAction {
-  type: "DEPOSIT",
-  payload:number
-}
-interface withDrawAction {
-  type: "WITHDRAW",
-  payload:number
-}
 
-interface bankruptAction {
-  type: "BANKRUPT"
-}
-
-type Action = DepositAction | withDrawAction | bankruptAction;
 
 const reducer = (state: number = initialState, action:Action) => {
   switch (action.type) {
-    case 'DEPOSIT':
+    case ActionType.DEPOSIT:
       return state+action.payload
       break;
-    case 'WITHDRAW':
+    case ActionType.WITHDRAW:
       return state-action.payload
       break;
-    case 'BANKRUPT':
+    case ActionType.BANKRUPT:
       return 0
       break;
   
